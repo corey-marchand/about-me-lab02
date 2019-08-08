@@ -97,11 +97,14 @@ if(question6 === '1'){
   alert('Congrats ' + userName + ', you were correct');
   console.log('while loop');
   totalAnswersCorrect++;
-} else if(question6 !== 1){
-  alert('Sorry' + userName + ', try again!');
+} else if(question6 < '1'){
+  alert('Sorry' + userName + ', try again! You were just a little too low');
   prompt('What is Corey\'s favorite number?');
   console.log('while loop wrong asnwer');
   // totalAnswersWrong++;
+} else if(question6 > '1'){
+  alert('Sorry ' + userName + ', that answer was too high');
+  prompt('What is Corey\'s favorite number?');
 }
 
 var statesLivedArray = ['missouri', 'south carolina', 'virginia', 'alabama'];
