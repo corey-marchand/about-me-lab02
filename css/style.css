@@ -1,4 +1,74 @@
+
+h2 {
+  text-align: center;
+  font-size: 30px;
+}
+
+h1 {
+  font-size: 40px;
+  text-align: center;
+  /* padding-right: 45%; */
+}
+
+body {
+  width: auto;
+  background-color: aqua;
+}
+
+h3 {
+  text-align: center;
+}
+
 main {
-  background-color: rgb(219, 219, 148);
-  height: 650px;
+  height: 600px;
+  border: solid;
+  border-color: cornflowerblue;
+  position: relative;
+  overflow: scroll;
+  width: auto;
+  text-align: center;
+  /* padding-left: 100px;
+  padding-right: 100px;
+   */
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+p {
+  font-size: 25px;
+}
+
+li {
+  font-size: 25px;
+}
+
+span ul li{
+  display: inline-block;
+  background-color: blue;
+  /* text-align: center; */
+  /* width: auto; */
+  margin-left: 7%;
+  margin-right: 7%;
+  width: auto;
+  /* padding-left: 80px; */
+}
+
+footer  {
+  /* padding-top: 20px; */
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 1rem;
+  text-align: center;
+  background-color: aliceblue;
+  height: 80px;
+}
+
+footer div {
+  padding-top: 25px;
+}
+
+body {
+  overflow: scroll;
+  height: 1500px;
 }
