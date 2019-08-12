@@ -1,8 +1,8 @@
 'use strict';
 
 var userName = prompt('What\'s your name?');
-alert('Hi ' + userName + ', it is a pleasure to meet you.');
 console.log('Prompt asking user what their name is');
+alert('Hi ' + userName + ', it is a pleasure to meet you.');
 
 var questionsArray = ['Has Corey ever gone to France?', 'Is corey 23 years old?', 'Has Corey attended 3 different colleges?', 'Has Corey slept more than 24 hours at once before?', 'Has Corey ever played in the nfl?'];
 
@@ -10,26 +10,24 @@ var rightAnswerArray = ['Right answer ' + userName + '! I have never gone to fra
 
 var wrongAnswerArray = ['Sorry ' + userName + ' I have never been to France, but one day, right?', 'Incorrect ' + userName + ', maybe next time, eh?', 'Has Corey attended 3 different colleges?', 'Incorrect, ' + userName + '. Once upon a time, I came up with mono', 'Correct, ' + userName + '. I definately have not but everyonce in a while I play madden, which is practically the same thing.'];
 
-var allArray = [rightAnswerArray, questionsArray, wrongAnswerArray];
-
 var totalAnswersCorrect = 0;
 
-function getItDone(allArray) {
-  prompt(allArray[1]);
-  if(allArray[1] === 'yes'){
-    allArray[0];
-    allArray[1].toLowerCase();
+
+function getItDone() {
+  for(var i = 0; i < questionsArray.length; i++){
+    var rightAnswer = rightAnswerArray[0].toLowerCase();
+    var wrongAnswer = wrongAnswerArray[0].toLowerCase();
+    console.log('here');
+  } if(questionsArray[0] === 'yes') {
+    alert(rightAnswer);
+    console.log('here2');
     totalAnswersCorrect++;
-  } else if(allArray[1] === 'no') {
-    allArray[2];
+  } else if(questionsArray[0] !== 'yes') {
+    alert(wrongAnswer);
   }
-  return getItDone(allArray[0, 1, 2]);
 }
 
-getItDone(allArray[0, 1, 2]);
-
-
-
+getItDone();
 
 
 
