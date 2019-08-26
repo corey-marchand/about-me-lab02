@@ -4,30 +4,36 @@ var userName = prompt('What\'s your name?');
 console.log('Prompt asking user what their name is');
 alert('Hi ' + userName + ', it is a pleasure to meet you.');
 
+var totalAnswersCorrect = 0;
+
 var questionsArray = ['Has Corey ever gone to France?', 'Is corey 23 years old?', 'Has Corey attended 3 different colleges?', 'Has Corey slept more than 24 hours at once before?', 'Has Corey ever played in the nfl?'];
 
 var rightAnswerArray = ['Right answer ' + userName + '! I have never gone to france, but I hope to go someday!', 'You are correct, ' + userName, 'You are correct,' + userName + '. I have attended WSU, U of A, and Olympic Community College', 'Correct, ' + userName + '. Mono comes straight from Satan', 'Flattered,' + userName + ', but definately not.'];
 
 var wrongAnswerArray = ['Sorry ' + userName + ' I have never been to France, but one day, right?', 'Incorrect ' + userName + ', maybe next time, eh?', 'Has Corey attended 3 different colleges?', 'Incorrect, ' + userName + '. Once upon a time, I came up with mono', 'Correct, ' + userName + '. I definately have not but everyonce in a while I play madden, which is practically the same thing.'];
 
-var totalAnswersCorrect = 0;
+
+function getItDone(questionsArray, rightAnswerArray, wrongAnswerArray) {
 
 
-function getItDone() {
   for(var i = 0; i < questionsArray.length; i++){
-    var rightAnswer = rightAnswerArray[0].toLowerCase();
-    var wrongAnswer = wrongAnswerArray[0].toLowerCase();
+    var rightAnswer = rightAnswerArray[i].toLowerCase();
+    var wrongAnswer = wrongAnswerArray[i].toLowerCase();
     console.log('here');
-  } if(questionsArray[0] === 'yes') {
-    alert(rightAnswer);
-    console.log('here2');
-    totalAnswersCorrect++;
-  } else if(questionsArray[0] !== 'yes') {
-    alert(wrongAnswer);
+
+    if(questionsArray[i] === 'yes') {
+      alert(rightAnswer);
+      console.log('here2');
+      totalAnswersCorrect+1;
+
+    } else if(questionsArray[i] === 'no'){
+      alert(wrongAnswer);
+    }
   }
 }
 
-getItDone();
+getItDone(questionsArray, rightAnswerArray, wrongAnswerArray);
+
 
 
 
@@ -121,41 +127,41 @@ getItDone();
 
 
 
-// var question6 = prompt('What is Corey\'s favorite number?');
-// if(question6 === '1'){
-//   alert('Congrats ' + userName + ', you were correct');
-//   console.log('while loop');
-//   totalAnswersCorrect++;
-// } else if(question6 < '1'){
-//   alert('Sorry' + userName + ', try again! You were just a little too low');
-//   prompt('What is Corey\'s favorite number?');
-//   console.log('while loop wrong asnwer');
-//   // totalAnswersWrong++;
-// } else if(question6 > '1'){
-//   alert('Sorry ' + userName + ', that answer was too high');
-//   prompt('What is Corey\'s favorite number?');
-// }
+var question6 = prompt('What is Corey\'s favorite number?');
+if(question6 === '1'){
+  alert('Congrats ' + userName + ', you were correct');
+  console.log('while loop');
+  totalAnswersCorrect++;
+} else if(question6 < '1'){
+  alert('Sorry' + userName + ', try again! You were just a little too low');
+  prompt('What is Corey\'s favorite number?');
+  console.log('while loop wrong asnwer');
+  // totalAnswersWrong++;
+} else if(question6 > '1'){
+  alert('Sorry ' + userName + ', that answer was too high');
+  prompt('What is Corey\'s favorite number?');
+}
 
-// var statesLivedArray = ['missouri', 'south carolina', 'virginia', 'alabama'];
-// var attempts = 0;
+var statesLivedArray = ['missouri', 'south carolina', 'virginia', 'alabama'];
+var attempts = 0;
 
-// var indicator = false ;
+var indicator = false ;
 
-// while(attempts <= 7){
-//   var question7 = prompt('What states has Corey lived in besides Washington?').toLowerCase();
-//   for(var i = 0; i < statesLivedArray.length; i++){
-//     if(question7 === statesLivedArray[i]){
-//       indicator = true;
-//     }
-//   }
-//   if(!indicator){
-//     alert('try again!');
-//     attempts++;
-//   } else {
-//     alert('correct');
-//     totalAnswersCorrect++;
-//     break;
-//   }
-// }
+while(attempts <= 7){
+  var question7 = prompt('What states has Corey lived in besides Washington?').toLowerCase();
+  for(var i = 0; i < statesLivedArray.length; i++){
+    if(question7 === statesLivedArray[i]){
+      indicator = true;
+    }
+  }
+  if(!indicator){
+    alert('try again!');
+    attempts++;
+  } else {
+    alert('correct');
+    totalAnswersCorrect++;
+    break;
+  }
+}
 
-// alert('Congrats, you recieved a score of ' + totalAnswersCorrect + ' / 7 on the quiz about me!');
+alert('Congrats, you recieved a score of ' + totalAnswersCorrect + ' / 7 on the quiz about me!');
